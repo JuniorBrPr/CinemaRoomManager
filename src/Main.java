@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Main {
     final static Scanner in = new Scanner(System.in);
     static int rows, seats;
-    static int option = 1;
 
     public static void main(String[] args) {
         char[][] cinema = setCinema();
+        int input;
         do {
             System.out.println("""
                                         
@@ -15,17 +15,16 @@ public class Main {
                     3. Statistics
                     0. Exit
                     """);
-
-            int input = in.nextInt();
+            input = in.nextInt();
 
             switch (input) {
-                case 0 -> option = 0;
+                case 0 -> System.out.println("Goodbye!");
                 case 1 -> displayCinema(cinema);
                 case 2 -> buyTicket(cinema);
                 case 3 -> showStatistics(cinema);
                 default -> System.out.println("Invalid input");
             }
-        } while (option != 0);
+        } while (input != 0);
     }
 
     public static void showStatistics(char[][] cinema) {
