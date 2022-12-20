@@ -1,4 +1,5 @@
 # CinemaRoomManager
+## Description
 This Java program is a simple cinema ticketing system that allows users to view the seats in the cinema, purchase 
 tickets, and view statistics about ticket sales.
 
